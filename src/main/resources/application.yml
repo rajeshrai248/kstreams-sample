@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: kstreams-demo
+  kafka:
+    bootstrap-servers: localhost:9092
+  cloud:
+    function:
+      definition: streamService
+    stream:
+      bindings:
+        streamService-in-0:
+          destination: input-topic
+        streamService-out-0:
+          destination: output-topic
